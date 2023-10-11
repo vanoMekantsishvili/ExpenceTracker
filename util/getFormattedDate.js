@@ -1,6 +1,6 @@
-export const getFormattedDate = (data) => {
-  return `${data.getFullYear()}-${data.getMonth() + 1}-${data.getDate()}`;
-};
+export function getFormattedDate(date) {
+  return date.toISOString().slice(0, 10);
+}
 
 export const getDateMinusDays = (date, days) => {
   return new Date(date.getFullYear(), date.getMonth(), date.getDate() - days);
